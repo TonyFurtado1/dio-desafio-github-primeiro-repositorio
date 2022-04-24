@@ -98,36 +98,47 @@ Entendendo o que é e o que pode fornecer o Git e o Github em conjunto:
 **toni@toni:~/workspace$ echo 'conteudo' | git hash-object --stdin
 fc31e91b26cf85a55e072476de7f263c89260eb1 (usando função do git)
 toni@toni:~/workspace$ echo -e 'conteudo' | openssl sha1
-(stdin)= 65b0d0dda479cc03cce59528e28961e498155f5c**
 
-![](/home/toni/Imagens/Screenshot from 2022-04-22 01-06-21.png)
+<img src = "img/fig1.png">
+
+
 
 ​	Os objetos especificos do git possui meta dados e geram SHA diferentes do openssl
 
 ​	Agora seram passados os metadados e a chave será igual a primeira
 
-**toni@toni:~/workspace$ echo 'conteudo' | git hash-object --stdin
+toni@toni:~/workspace$ echo 'conteudo' | git hash-object --stdin
 fc31e91b26cf85a55e072476de7f263c89260eb1
 toni@toni:~/workspace$ echo -e 'conteudo' | openssl sha1
 (stdin)= 65b0d0dda479cc03cce59528e28961e498155f5c
 toni@toni:~/workspace$ echo -e 'blob 9\0conteudo' | openssl sha1
-(stdin)= fc31e91b26cf85a55e072476de7f263c89260eb1**
+(stdin)= fc31e91b26cf85a55e072476de7f263c89260eb1
 
-![](/home/toni/Imagens/Screenshot from 2022-04-22 01-15-51.png)
+<img src = "img/Screenshot from 2022-04-22 01-15-51.png">
+
+
+
+
 
 ​	A Tree armazenam e apontam para tipos de Blob  e outras Tree diferentes e tambem contem metas dados e guarda o nome do arquivo
 
 ​	Qualquer alteração irá alterar todos os SHA
 
-​	![](/home/toni/Imagens/Screenshot from 2022-04-22 01-21-14.png)
+​	<img src = "img/Screenshot from 2022-04-22 01-21-14.png">
+
+
+
+
 
 ​	Por fim o objeto mais importante de todos que ira juntar tudo e dar sentido as alteraçoes que estaram sendo feitas será o commite que alem de conter tree e blob tambem contem parente (o commit anterior), menssagem, registro de data e hora
 
-![](/home/toni/Imagens/Screenshot from 2022-04-22 01-23-20.png)
+<img src = "img/Screenshot from 2022-04-22 01-23-20.png">
+
+
 
 ​	Podendo também ser colocada uma messagem para entendimento onde foi a mudança. Se alterar o sha do blob será tambem alterado o sha da tree que por sua vez será alterado o sha do commit, fiicando então, uma linha do tempo de todas as alterações e o autor do commit garantindo segurança e confiabilidade.
 
-![](/home/toni/Imagens/Screenshot from 2022-04-22 01-29-00.png)
+ <img src = "img/Screenshot from 2022-04-22 01-29-00.png">
 
 ​	Ele se apresenta como um sistema distribuido seguro porque o codigo se que encontra no host na nuvem representa a vesão mais atualizada, mas todos os integrantes da equipe tambem possuem versões confiaveis em suas maquinas.
 
@@ -148,13 +159,15 @@ Cria uma pasta dentro da workspace (mkdir  livro-receitas)
 
 Dentro da passta livro-receitas digitar **git init**
 
-![cd](/home/toni/Imagens/Screenshot from 2022-04-22 09-48-48.png)
+<img src = "img/Screenshot from 2022-04-22 09-48-48.png">
 
-![](/home/toni/Imagens/Screenshot from 2022-04-22 09-59-06.png)
+<img src = "img/Screenshot from 2022-04-22 09-59-06.png">
+
+
 
 ## Utilizando o editor de testo Markdown
 
-![](/home/toni/Imagens/Screenshot from 2022-04-22 10-12-55.png)
+<img src = "img/Screenshot from 2022-04-22 10-12-55.png">
 
 commitando o qrquivo criado
 
@@ -162,13 +175,13 @@ commitando o qrquivo criado
 
 * git commit -m "Commit inicial"
 
-![](/home/toni/Imagens/Screenshot from 2022-04-22 10-20-35.png)
+<img src = "img/Screenshot from 2022-04-22 10-20-35.png">
 
 ## Ciclo de vida dos arquivos
 
 * Git init cria um repositório no diretorio
 
-![](/home/toni/Imagens/Screenshot from 2022-04-22 10-25-09.png)
+<img src = "img/Screenshot from 2022-04-22 10-25-09.png">
 
 1. Dentro do tracked estão os arquivos que podem ser rastreado pelo git (ummodifided, modified e staged)
 
@@ -182,7 +195,7 @@ commitando o qrquivo criado
 
    
 
-![](/home/toni/Imagens/Screenshot from 2022-04-22 10-42-03.png)
+<img src = "img/Screenshot from 2022-04-22 10-42-03.png">
 
 ​	O repositorio remoto esta guardado no servidor
 
@@ -192,12 +205,10 @@ commitando o qrquivo criado
 
 ​	Cria uma pasta receita e mover o arquivo salada-tomate.md para ela
 
-![](/home/toni/Imagens/Screenshot from 2022-04-22 11-05-09.png)
+<img src = "img/Screenshot from 2022-04-22 11-05-09.png">
 
-![](/home/toni/Imagens/Screenshot from 2022-04-22 11-08-25.png)
+<img src = "img/Screenshot from 2022-04-22 11-08-25.png">
 
-![](/home/toni/Imagens/Screenshot from 2022-04-22 11-14-05.png)
+<img src = "img/Screenshot from 2022-04-22 11-14-05.png">
 
-![](/home/toni/Imagens/Screenshot from 2022-04-22 11-18-47.png)
-
-![](/home/toni/Imagens/Screenshot from 2022-04-22 11-35-29.png)
+<img src = "img/Screenshot from 2022-04-22 11-35-29.png">
