@@ -5,7 +5,7 @@
 ### Link para Downloads
 [github.com](https://git-scm.com/downloads)
 
-Entendendo o que é e o que pode fornecer o Git e o Github em conjunto:	
+Entendendo o que eles são e como eles trabalham em conjunto:	
 
 1. Controle de versão;
 
